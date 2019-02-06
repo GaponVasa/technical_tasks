@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous"
+  >
+  <style>
+    /* Large desktop */
+    @media (min-width: 1140px) and (max-width: 1500px) { 
+      .cat{
+        width:30vw;
+        height: 50vh;
+      }
+      .cat > img{
+        height: 80%;
+      }
+     }
+    
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 960px) and (max-width: 1139px) { 
+      .cat{
+        width:40vw; 
+        height: 80vh;
+      }
+      .cat > img{
+        height: 80%;
+      }
+     }
+      
+    /* Landscape phone to portrait tablet */
+    @media (min-width: 720px) and (max-width: 959px) { 
+      .cat{
+        width:60vw;
+        height: 60vh;
+        margin: auto;
+      }
+      .cat > img{
+        height: 80%;
+      }
+     }
+      
+    /* Landscape phones and down */
+    @media (min-width: 320px) and (max-width: 719px) { 
+      .cat{
+        width:80vw;
+        height: 80vh;
+        margin: auto;
+      }
+      .cat > img{
+        height: 80%;
+      }
+     }
+  </style>
+</head>
+<body>
+  <div class="container col">
+    <div class="d-flex justify-content-md-center justify-content-lg-between flex-wrap flex-md-row flex-sm-column my-3">
+      <div class="card cat my-2">
+        <img class="card-img-top" src="https://bugaga.ru/uploads/posts/2017-03/1489052030_kotik-hosiko-12.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Рыжик</p>
+        </div>
+      </div>
+      <div class="card cat my-2">
+        <img class="card-img-top" src="http://trikky.ru/wp-content/blogs.dir/1/files/2018/08/14/10409658_911997115481773_8022799784360495766_n.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Вилли</p>
+        </div>
+      </div>
+      <div class="card cat my-2">
+        <img class="card-img-top" src="https://memepedia.ru/wp-content/uploads/2017/10/котик-туть-5.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Оскар</p>
+        </div>
+      </div>
+      <div class="card cat my-2">
+        <img class="card-img-top" src="http://pipcat.ru/wp-content/uploads/2016/07/5-popular-flat-faced-cat-breeds-55460dd1f02401.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Марго</p>
+        </div>
+      </div>
+      <div class="card cat my-2">
+        <img class="card-img-top" src="https://static9.depositphotos.com/1594920/1089/i/450/depositphotos_10893312-stock-photo-chartreux-cat-16-months-old.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Хорик</p>
+        </div>
+      </div>
+      <div class="card cat my-2">
+        <img class="card-img-top" src="https://i2-prod.leeds-live.co.uk/news/leeds-news/article15752393.ece/ALTERNATES/s615/0_800px-Savannah_Cat_portrait.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Генри</p>
+        </div>
+      </div>
+      <div class="card cat my-2">
+        <img class="card-img-top" src="https://www.animalfriends.co.uk/app/uploads/2016/10/27163820/iStock_86086153_MEDIUM1-e1477582806563.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Вася</p>
+        </div>
+      </div>
+      <div class="card cat my-2">
+        <img class="card-img-top" src="https://static1.squarespace.com/static/57c4aca420099e3efb1bdafd/t/594c7bbff7e0ab535a54145f/1493851615883/adoptable+cats+at+the+dancing+cat+san+jose" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Борис</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mb-3">
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </div>
+      
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
