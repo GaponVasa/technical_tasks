@@ -1,4 +1,4 @@
-1. # React Native Test Task for Students
+# React Native Test Task for Students
 DB Best Technologies
 
 # Main requirements
