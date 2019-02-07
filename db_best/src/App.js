@@ -1,29 +1,62 @@
-import React, { Component } from 'react';
-import arrJson from './JSON/test.json';
-import Card from './components/card/card';
+import React, { Component } from "react";
+import arrJson from "./JSON/test.json";
+import Card from "./components/card/card";
+import Button from "./components/button/button.js";
 
 class App extends Component {
-
-  createCardsArr(){
-    return arrJson.map(el=>{
-      //console.log(el);
-      return <Card
-        key={el.id}
-        imgSrc={el.imageUrl}
-        text={el.name}
-      />
-    })
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedCard: []
+    };
   }
 
+  createCardsArr(eventClick) {
+    return arrJson.map(el => {
+      return (
+        <Card
+          key={el.id + el.name}
+          imgSrc={el.imageUrl}
+          text={el.name}
+          clickCard={() => eventClick(el.id + "-" + el.name)}
+        />
+      );
+    });
+  }
+
+  clickSubmit() {
+    let { selectedCard } = this.state;
+    let result = "";
+    selectedCard.forEach((el, ind) => {
+      ind === 0 ? (result = el) : (result = result + " , " + el);
+    });
+    alert(result);
+  }
+
+  clickCard = keyId => {
+    let { selectedCard } = this.state;
+    let coincidence = selectedCard.indexOf(keyId);
+    if (coincidence === -1) {
+      this.setState({ selectedCard: [...selectedCard, keyId] });
+    } else {
+      selectedCard.splice(coincidence, 1);
+      this.setState({ selectedCard: [...selectedCard] });
+    }
+  };
+
   render() {
-    console.log(arrJson);
     return (
       <div className="container col">
         <div className="d-flex justify-content-md-center justify-content-lg-between flex-wrap flex-md-row flex-sm-column my-3">
-          {this.createCardsArr()}
+          {this.createCardsArr(this.clickCard)}
         </div>
         <div className="text-center mb-3">
-          <button type="submit" className="btn btn-outline-primary">Submit</button>
+          <Button
+            type={"submit"}
+            cssClass={"btn btn-outline-primary"}
+            onclick={() => this.clickSubmit()}
+            textButton={"Submit"}
+          />
         </div>
       </div>
     );
